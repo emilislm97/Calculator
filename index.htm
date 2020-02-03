@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Calculater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cal">
+        <div id="container">
+        <input onclick="temizle()" id="i1" type="text" placeholder="0" />
+
+        <button onclick="gonder(7)" value="7">7</button>
+        <button onclick="gonder(8)" value="8">8</button>
+        <button onclick="gonder(9)" value="9">9</button>
+        <button onclick="gonder('%')" value="%" class="b2">%</button>
+        <button onclick="gonder(4)" value="4">4</button>
+        <button onclick="gonder(5)" value="5">5</button>
+        <button onclick="gonder(6)" value="6">6</button>
+        <button onclick="gonder('*')" value="x" class="b2">x</button>
+        <button onclick="gonder(1)" value="1">1</button>
+        <button onclick="gonder(2)" value="2">2</button>
+        <button onclick="gonder(3)" value="3">3</button>
+        <button onclick="gonder('-')" value="-" class="b2">-</button>
+        <button onclick="gonder(0)" value="0">0</button>
+        <button onclick="gonder('.')" value=".">&#9679;</button>
+        <button onclick="gonder('+')" value="+" class="b2">+</button>
+        <button onclick="gonder('/')" value="/" class="b2">/</button>
+        <button onclick="sifirla('')" value="" class="b2">C</button>
+        <button onclick="hesab()" value="=" id="b16" class="b2">=</button>
+
+    </div>
+    </div>
+
+    <script>
+        function gonder(apar) {
+            document.getElementById("i1").value = document.getElementById("i1").value + apar;
+        }
+        function hesab() {
+            document.getElementById("i1").value = eval(document.getElementById("i1").value);
+        }
+
+        function sifirla() {
+            document.getElementById("i1").value = "";
+        }
+        function temizle() {
+            if (document.getElementById("i1").value == 0){
+                document.getElementById("i1").value = " ";
+            }
+            
+        }
+    </script>
+
+</body>
+
+</html>
